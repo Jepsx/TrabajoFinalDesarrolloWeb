@@ -4,7 +4,7 @@ document.getElementById('btn-load-more').addEventListener('click', function() {
         {
             id: "feijoada",
             titulo: "Feijoada",
-            img: "img/feijoada.webp",
+            img: "../img/feijoada.webp",
             imgMob: "img/mobile_feijoada.webp",
             keyDesc: "feijoadaDesc", 
             textoDefault: "La feijoada es un guiso de frijoles negros con carne de cerdo, considerado el plato nacional de Brasil."
