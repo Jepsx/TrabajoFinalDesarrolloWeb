@@ -4,16 +4,16 @@ document.getElementById('btn-load-more').addEventListener('click', function() {
         {
             id: "feijoada",
             titulo: "Feijoada",
-            img: "/TrabajoFinalDesarrolloWeb/img/feijoada.webp",
-            imgMob: "/TrabajoFinalDesarrolloWeb/img/mobile_feijoada.webp",
+            img: "/img/feijoada.webp",
+            imgMob: "/img/mobile_feijoada.webp",
             keyDesc: "feijoadaDesc", 
             textoDefault: "La feijoada es un guiso de frijoles negros con carne de cerdo, considerado el plato nacional de Brasil."
         },
         {
             id: "moqueca",
             titulo: "Moqueca",
-            img: "/TrabajoFinalDesarrolloWeb/img/moqueca.webp",
-            imgMob: "/TrabajoFinalDesarrolloWeb/img/mobile_moqueca.webp",
+            img: "/img/moqueca.webp",
+            imgMob: "/img/mobile_moqueca.webp",
             keyDesc: "moquecaDesc",
             textoDefault: "Un delicioso cocido de pescado, camarones, leche de coco y aceite de palma (dendê)."
         }
