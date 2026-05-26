@@ -5,7 +5,7 @@ lucide.createIcons();
 const slides = [
     { src: "./img/mountain-botafogo-beach-rio-de-janeiro-brazil 1.webp", title: {es: "Rio de Janeiro", en: "Rio de Janeiro"} },
     { src: "./img/iguazu.webp", title: {es: "Cataratas del Iguazú", en: "Iguazu Falls"} },
-    { src: "./img/saopaulo.webp", title: {es: "São Paulo", en: "São Paulo"} }
+    { src: "./img/saoPaulo.webp", title: {es: "São Paulo", en: "São Paulo"} }
 ];
 
 let currentIdx = 0;
