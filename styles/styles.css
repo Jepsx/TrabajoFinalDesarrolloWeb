@@ -1,0 +1,327 @@
+:root {
+    --brand-blue: #0B205A;
+    --white: #ffffff;
+    --gray-light: #f3f4f6;
+    --gray-text: #4b5563;
+    --black-overlay: rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--gray-light);
+    color: #1f2937;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* HEADER */
+header {
+    background-color: var(--brand-blue);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex; /* Centra la imagen si el div es más grande */
+    align-items: center;
+    justify-content: center;
+    width: 48px;  
+    height: 48px; 
+    border-radius: 50%; 
+    overflow: hidden;   
+    border: 2px solid #009739; 
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme al estirarse */
+    display: block;
+}
+
+.nav-desktop {
+    display: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-desktop a {
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-desktop a:hover { color: #d1d5db; }
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: opacity 0.2s;
+}
+
+.lang-btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+}
+
+.mobile-menu-btn {
+    display: block;
+    color: var(--white);
+}
+
+/* HERO / CAROUSEL */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Necesario si tienes imágenes absolutas dentro */
+    width: 100%;
+    height: 60vh;       /* Ajusta la altura a una medida relativa */
+    min-height: 400px;  /* Evita que se aplaste demasiado en móviles */
+    overflow: hidden;   /* CORTA cualquier contenido que se salga hacia 'lugares' */
+}
+
+#carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.carousel-control:hover { background: rgba(0,0,0,0.6); }
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.carousel-caption {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: var(--white);
+}
+
+/* SECTION: CONOCE BRASIL */
+.section-discover {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.discover-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.discover-content h2 {
+    color: var(--brand-blue);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.discover-content p {
+    color: var(--gray-text);
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.btn-blue {
+    background-color: var(--brand-blue);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.btn-blue:hover { background-color: #08163f; }
+
+/* SECTION: FOOD */
+.section-food {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+.article-food {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.food-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.food-title {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.food-card-container {
+    align-self: flex-end;
+    max-width: 500px;
+    width: 100%;
+}
+
+.glass-card {
+    
+    background: rgba(255, 255, 255, 0.95); /* Mayor opacidad para contraste */
+    backdrop-filter: blur(8px);
+    padding: 24px;
+    border-radius: 8px;
+    color: #1f2937; /* Color oscuro sólido para legibilidad */
+    margin-bottom: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--brand-blue);
+    padding: 12px 40px;
+    border-radius: 4px;
+    font-weight: bold;
+    float: right;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* MOBILE MENU */
+.mobile-nav {
+    display: none;
+    background-color: var(--brand-blue);
+    padding: 10px 20px 20px;
+    border-top: 1px solid #08163f;
+}
+
+.mobile-nav.active { display: flex; flex-direction: column; gap: 15px; }
+.mobile-nav a { font-size: 1rem; padding: 5px 0; }
+.mobile-lang-row { display: flex; align-items: center; gap: 10px; border-top: 1px solid #08163f; pt: 10px; }
+
+/* FOOTER */
+footer {
+    background-color: var(--brand-blue);
+    color: white;
+    text-align: center;
+    padding: 24px;
+    font-size: 0.875rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .nav-desktop { display: flex; }
+    .mobile-menu-btn { display: none; }
+    .hero { height: 70vh; }
+    .section-discover { grid-template-columns: 1fr 1.5fr; padding: 100px 20px; }
+    .discover-img { height: 500px; }
+    .section-food { padding: 80px; }
+    .food-title { font-size: 3.5rem; }
+}
+
+/* ACCESSIBILITY FOCUS */
+button:focus-visible, a:focus-visible {
+    outline: 3px solid #2563eb; /* Azul brillante */
+    outline-offset: 4px;
+}
+
+/* Nueva clase única para el botón de cargar platos */
+.btn-load-food {
+    background-color: white;
+    color: var(--brand-blue);
+    padding: 12px 48px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    
+    /* Centrado horizontal */
+    display: block;
+    margin: 40px auto; 
+    
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.btn-load-food:hover {
+    background-color: var(--gray-light);
+    transform: translateY(-2px);
+    border-color: var(--brand-blue);
+}
+
+/* Contenedor para dar espacio al final de la página */
+.load-more-section {
+    width: 100%;
+    padding: 20px 0 60px 0;
+    background-color: var(--gray-light);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon.webp" type="image/webp"/>
+
+    <title>Requisitos de Viaje - Conoce Brasil</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html"> 
+                    <img src="../img/icon.webp" alt="Logo Turismo Brasil" >
+                </a>
+            </div>
+            
+            <nav class="nav-desktop" aria-label="Navegación principal">
+                <a href="../index.html" data-i18n="navHome">Inicio</a>
+                <a href="places.html" data-i18n="navPlaces">Lugares</a>
+                <a href="food.html" data-i18n="navFood">Comida</a>
+
+                <button id="lang-toggle-desktop" class="lang-btn" aria-label="Cambiar idioma">
+                    <img id="flag-icon-desktop" src="https://flagcdn.com/w40/co.png" alt="Bandera de colombia">
+                </button>
+            </nav>
+
+            <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Móvil">
+                <a href="../index.html" data-i18n="navHome">Inicio</a>
+                <a href="places.html" data-i18n="navPlaces">Lugares</a>
+                <a href="food.html" data-i18n="navFood">Comida</a>
+            <div class="mobile-lang-row">
+                <span data-i18n="navLang">Idioma:</span>
+                <button id="lang-toggle-mobile" class="lang-btn">
+                    <img id="flag-icon-mobile" src="https://flagcdn.com/w40/co.png" alt="Español">
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 40px auto; padding: 0 20px; flex: auto;">
+        <section class="glass-card">
+            <h1 data-i18n="reqMainTitle" styles="color: var(--brand-blue); border-bottom: 2px solid var(--brand-blue); padding-bottom: 10px;">
+                Documentación para Ingreso
+            </h1>
+            
+            <p data-i18n="reqIntro" styles="margin: 20px 0; color: var(--gray-text);">
+                Asegúrate de contar con los siguientes documentos antes de tu viaje para garantizar un ingreso sin inconvenientes:
+            </p>
+
+            <article style="margin-bottom: 30px;">
+                <h2 data-i18n="reqDocTitle" styles="font-size: 1.25rem; color: var(--brand-blue);">1. Documento de Identidad</h2>
+                <ul  styles="margin-left: 20px; color: var(--gray-text);">
+                    <li data-i18n="reqDocItem1"><strong >Mercosur:</strong> Solo se requiere Documento Nacional de Identidad vigente.</li>
+                    <li data-i18n="reqDocItem2"><strong>Resto del Mundo:</strong> Pasaporte vigente con al menos 6 meses de validez.</li>
+                </ul>
+            </article>
+
+            <article style="margin-bottom: 30px;">
+                <h2 data-i18n="reqVaccineTitle" styles="font-size: 1.25rem; color: var(--brand-blue);">2. Vacunas</h2>
+                <p data-i18n="reqVaccineDesc" styles="color: var(--gray-text);">Se recomienda la vacuna contra la <strong>Fiebre Amarilla</strong> si viajas a zonas rurales o selváticas. Verifica las normativas de salud actuales sobre COVID-19 antes de partir.</p>
+            </article>
+
+            <article style="margin-bottom: 30px;">
+                <h2 data-i18n="reqInsuranceTitle" styles="font-size: 1.25rem; color: var(--brand-blue);">3. Seguro de Viaje</h2>
+                <p data-i18n="reqInsuranceDesc" styles="color: var(--gray-text);">Aunque no es obligatorio para todos los turistas, es altamente recomendable contar con un seguro que cubra gastos médicos internacionales.</p>
+            </article>
+
+            <div style="background-color: var(--gray-light); padding: 15px; border-radius: 4px; border-left: 5px solid #ffcc00;">
+                <p data-i18n="reqNote"><strong>Nota importante:</strong> Los ciudadanos de algunos países podrían requerir VISA de turismo. Consulta con el consulado brasileño más cercano.</p>
+            </div>
+        </section>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="../index.html" class="btn-blue" style="display: inline-block;" data-i18n="btnBack">Volver al inicio</a>
+        </div>
+    </main>
+
+    <footer>
+        <p data-i18n="footer">&copy; 2026 Turismo Brasil. Todos los derechos reservados.</p>
+    </footer>
+
+<script>lucide.createIcons();</script>
+<script src="../scripts/translations.js"></script>
+<script src="../scripts/menu_lenguage.js"></script>
+
+</body>
+</html>

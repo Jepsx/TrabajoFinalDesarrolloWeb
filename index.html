@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicon.webp" type="image/webp"/>
+    <title>Conoce Brasil - Turismo</title>
+
+    <!-- Enlace a CSS externo -->
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"> 
+                    <img src="./img/icon.webp" alt="Logo Turismo Brasil" >
+                </a>
+            </div>
+            
+            <nav class="nav-desktop" aria-label="Principal">
+                <a href="./pages/places.html" data-i18n="navPlaces">Lugares</a>
+                <a href="./pages/food.html" data-i18n="navFood">Comida</a>
+                <a href="./pages/requirements.html" data-i18n="navReq">Requisitos</a>
+                
+                <button id="lang-toggle-desktop" class="lang-btn" aria-label="Cambiar idioma">
+                    <!--uso de la api de flagcdn, para los iconos de las imagenes del pais para el idioma-->
+                    <img id="flag-icon-desktop" src="https://flagcdn.com/w40/co.png" alt="Bandera de colombia">
+                </button>
+            </nav>
+
+            <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Móvil">
+                <a href="./pages/places.html" data-i18n="navPlaces">Lugares</a>
+                <a href="./pages/food.html" data-i18n="navFood">Comida</a>
+                <a href="./pages/requirements.html" data-i18n="navReq">Requisitos</a>
+            <div class="mobile-lang-row">
+                <span data-i18n="navLang">Idioma:</span>
+                <button id="lang-toggle-mobile" class="lang-btn">
+                    <img id="flag-icon-mobile" src="https://flagcdn.com/w40/co.png" alt="Español">
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lugares" class="hero" aria-label="Carrusel de imágenes">
+            <img id="carousel-img" src="./img/mountain-botafogo-beach-rio-de-janeiro-brazil 1.webp" alt="Vista aérea de la playa de Botafogo con el morro de Pan de Azúcar al fondo en Río de Janeiro" fetchpriority="high"> 
+            <div class="hero-overlay"></div>
+            
+            <button id="prev-btn" class="carousel-control prev" aria-label="Anterior">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <button id="next-btn" class="carousel-control next" aria-label="Siguiente">
+                <i data-lucide="chevron-right"></i>
+            </button>
+
+            <div class="carousel-caption">
+                <h1 id="carousel-title">Rio de Janeiro</h1>
+            </div>
+        </section>
+
+        <section class="section-discover">
+            <img src="./img/sugarloaf-mountain-cable-car-sunset 1.webp" alt="Teleférico del Pan de Azúcar operando durante el atardecer con vista panorámica de la ciudad" class="discover-img" fetchpriority="high">
+            <div class="discover-content">
+                <h2 data-i18n="sec1Title">¡CONOCE BRASIL!</h2>
+                <p data-i18n="sec1Desc">Descubre la belleza de Brasil, un país lleno de cultura, playas increíbles y una selva amazónica vibrante. Disfruta de la hospitalidad de su gente y maravíllate con paisajes únicos en el mundo.</p>
+                <button class="btn-blue" data-i18n="sec1Btn" onclick="window.location.href='/pages/places.html'">DESCUBRE</button>
+            </div>
+        </section>
+
+        <section id="comida" class="section-food">
+            <picture>
+                <source srcset="./img/mobile_Acaraje.webp" media="(max-width: 768px)">
+                <img src="./img/Acaraje.webp" alt="Primer plano de un plato de Feijoada brasileña con guarniciones" class="food-bg" fetchpriority="high">
+            </picture>
+            <h2 class="food-title" data-i18n="sec2Title">¡Deliciosos Platos!</h2>
+            
+            <div class="food-card-container">
+                <div class="glass-card">
+                    <p data-i18n="sec2Desc">La gastronomía brasileña es una mezcla de influencias indígenas, europeas y africanas. Prueba la tradicional Feijoada, deliciosos cortes de carne y dulces típicos que deleitarán tu paladar.</p>
+                </div>
+                <button class="btn-white" data-i18n="sec2Btn" onclick="window.location.href='/pages/food.html'">CONOCE</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer">&copy; 2026 Turismo Brasil. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace a JS externo -->
+    <script src="https://unpkg.com/lucide@latest"></script>  
+    <script src="./scripts/menu_lenguage.js"></script>
+    <script src="./scripts/translations.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

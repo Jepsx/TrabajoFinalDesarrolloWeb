@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon.webp" type="image/webp"/>
+
+    <title>Gastronomía de Brasil</title>
+    <!-- Iconos de Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html"> 
+                    <img src="../img/icon.webp" alt="Logo Turismo Brasil" >
+                </a>
+            </div>
+            
+            
+            <nav class="nav-desktop" aria-label="Principal">
+                <a href="../index.html" data-i18n="navHome">Inicio</a>
+                <a href="../pages/places.html" data-i18n="navPlaces">Lugares</a>
+                <a href="../pages/requirements.html" data-i18n="navReq">Requisitos</a>
+                
+                <button id="lang-toggle-desktop" class="lang-btn" aria-label="Cambiar idioma">
+                    <img id="flag-icon-desktop" src="https://flagcdn.com/w40/co.png" alt="Bandera de colombia">
+                </button>
+            </nav>
+
+            <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Móvil">
+            <a href="../index.html" data-i18n="navHome">Inicio</a>
+            <a href="../pages/places.html" data-i18n="navPlaces">Lugares</a>
+            <a href="../pages/requirements.html" data-i18n="navReq">Requisitos</a>
+            <div class="mobile-lang-row">
+                <span data-i18n="navLang">Idioma:</span>
+                <button id="lang-toggle-mobile" class="lang-btn">
+                    <img id="flag-icon-mobile" src="https://flagcdn.com/w40/co.png" alt="Español">
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="food-container">
+        <!--  ACARAJÉ -->
+        <article id="acaraje" class="article-food">
+            <picture>
+                <source srcset="/img/mobile_Acaraje.webp"  media="(max-width: 768px)">
+                <img src="/img/Acaraje.webp" alt="Acarajé" class="food-bg">
+            </picture>
+            <h2 class="food-title">Acarajé</h2>
+            
+            <div class="food-card-container">
+                <div class="glass-card">
+                    <p data-i18n="acarajeDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- PÃO DE QUEIJO -->
+        <article id="pao-de-queijo" class="article-food">
+            <picture>
+                <source srcset="/img/mobile_Pao_de_queijo.webp"  media="(max-width: 768px)">
+                <img src="/img/Pao_de_queijo.webp" alt="Pão de queijo" class="food-bg">
+            </picture>
+            <h2 class="food-title">Pão de queijo</h2>
+            
+            <div class="food-card-container">
+                <div class="glass-card">
+                    <p data-i18n="paoDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <section class="load-more-section">
+        <button id="btn-load-more" class="btn-load-food" data-i18n="btnSeeMore">
+            Ver más platos
+        </button>
+    </section>
+    <footer>
+        <p data-i18n="footer">&copy; 2026 Turismo Brasil. Todos los derechos reservados.</p>
+    </footer>
+    <script>lucide.createIcons();</script>
+    <script src="../scripts/translations.js"></script>
+    <script src="../scripts/menu_lenguage.js"></script>
+    <script src="../scripts/food_loader.js"></script>
+
+</body>
+</html>
